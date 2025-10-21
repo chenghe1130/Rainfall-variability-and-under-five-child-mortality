@@ -12,8 +12,7 @@ child mortality in 59 low- and middle-income countries. Nature Water, 3, 881-889
 RSD Formula:
 RSD = Σ[(Monthly_rainfall - Historical_mean) / Historical_std] × (Historical_mean / Annual_mean)
 
-Author: Cheng He, Yixiang Zhu
-License: MIT
+Author: Cheng He
 """
 
 import pandas as pd
@@ -27,11 +26,11 @@ warnings.filterwarnings('ignore')
 # ============================================================================
 # Configuration
 # ============================================================================
-BASE_DIR = Path('/d2/home/user7/extreme_rainfall/DHS_RAINFALL/DATA')
+BASE_DIR = Path('.../DATA')
 INPUT_DIR = BASE_DIR / 'pf_result'
 OUTPUT_DIR = BASE_DIR / 'pf_rsd_results'
 CITY_LIST_DIR = BASE_DIR / 'city_list'
-PRECIP_DIR = Path('/d2/public/DHS/DHS_exposure_matching/met_csv/precip_csv')
+PRECIP_DIR = Path('/..../precip_csv')
 HISTORICAL_STATS_FILE = BASE_DIR / 'all_points_dhs_prep.csv'
 
 MIN_YEAR = 1981
@@ -315,19 +314,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-```
-
----
-
-## 📊 代码说明
-
-### 核心改进
-
-1. **完全独立计算**
-   - 从原始日降水数据开始
-   - 不依赖预计算结果（但如果有可以使用）
-   - 自动计算历史统计量
-
-2. **RSD 公式实现**
-```
-   RSD = Σ[(当月降水 - 历史月均) / 历史标准差] × (历史月均 / 历史年均)
