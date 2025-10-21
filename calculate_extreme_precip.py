@@ -24,11 +24,11 @@ warnings.filterwarnings('ignore')
 # ============================================================================
 # Configuration
 # ============================================================================
-BASE_DIR = Path('/d2/home/user7/extreme_rainfall/DHS_RAINFALL/DATA')
+BASE_DIR = Path('...../DATA')
 INPUT_DIR = BASE_DIR / 'pf_result'
 OUTPUT_DIR = BASE_DIR / 'pf_p999_results'
 CITY_LIST_DIR = BASE_DIR / 'city_list'
-PRECIP_DIR = Path('/d2/public/DHS/DHS_exposure_matching/met_csv/precip_csv')
+PRECIP_DIR = Path('....../precip_csv')
 THRESHOLD_FILE = BASE_DIR / 'all_points_dhs_prep.csv'
 
 PERCENTILE = 99.9
