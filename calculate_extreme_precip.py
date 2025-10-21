@@ -10,8 +10,7 @@ He, C., Zhu, Y., Guo, Y., et al. (2025). Rainfall variability and under-five
 child mortality in 59 low- and middle-income countries. Nature Water, 3, 881-889.
 https://doi.org/10.1038/s44221-025-00478-9
 
-Author: Cheng He, Yixiang Zhu
-License: MIT
+Author: Cheng He
 """
 
 import pandas as pd
